@@ -4,6 +4,7 @@ import cairocffi as cairo
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 from PIL import Image
+import doodle_classification
 
 # Specify canvas parameters in application
 drawing_mode = st.sidebar.selectbox(
