@@ -9,6 +9,7 @@ temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
 
 st.title("Art-ificial Intelligence")
+st.write(os.getcwd())
 
 classifier = load_learner('doodle_classifier.pkl')
 
