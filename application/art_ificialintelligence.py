@@ -12,6 +12,7 @@ st.title("Art-ificial Intelligence")
 st.write(os.getcwd())
 os.chdir('application')
 st.write(os.getcwd())
+st.write(listdir())
 classifier = load_learner('doodle_classifier.pkl')
 
 stroke_width = st.sidebar.slider("Stroke width: ", 10, 25, 15)
