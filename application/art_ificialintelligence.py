@@ -5,8 +5,8 @@ from streamlit_drawable_canvas import st_canvas
 from PIL import Image
 
 import pathlib
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+# temp = pathlib.PosixPath
+# pathlib.PosixPath = pathlib.WindowsPath
 
 st.title("Art-ificial Intelligence")
 st.write(os.getcwd())
