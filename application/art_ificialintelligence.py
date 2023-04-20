@@ -10,7 +10,7 @@ pathlib.PosixPath = pathlib.WindowsPath
 
 st.title("Art-ificial Intelligence")
 
-classifier = load_learner('/application/doodle_classifier.pkl')
+classifier = load_learner('doodle_classifier.pkl')
 
 stroke_width = st.sidebar.slider("Stroke width: ", 10, 25, 15)
 
