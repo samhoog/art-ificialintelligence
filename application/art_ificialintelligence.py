@@ -9,7 +9,11 @@ temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
 
 st.title("Art-ificial Intelligence")
-classifier = load_learner('doodle_classifier.pkl')
+
+path_to_model = 'doodle_classifier.pkl'
+
+with open(path_to_model, 'rb') as file:
+    classifier = load_learner(file)
 
 stroke_width = st.sidebar.slider("Stroke width: ", 10, 25, 15)
 
