@@ -1,2 +1,6 @@
 fastai
 streamlit_drawable_canvas
+pathlib
+numpy
+streamlit
+PIL
