@@ -12,9 +12,9 @@ st.title("Art-ificial Intelligence")
 # st.write(os.getcwd())
 # st.write(os.listdir())
 
-@st.cache(persist=True)
+@st.cache(hash_funcs={"MyUnhashableClass": lambda _: None})
 def load_model():
-	  return load_learner('application/doodle_classifier.pkl')
+	return load_learner('application/doodle_classifier.pkl')
 
 classifier = load_model()
 
