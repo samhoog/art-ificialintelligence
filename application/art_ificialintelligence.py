@@ -11,7 +11,12 @@ if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 st.title("Art-ificial Intelligence")
 # st.write(os.getcwd())
 # st.write(os.listdir())
-classifier = load_learner('application/doodle_classifier.pkl')
+
+@st.cache
+def load_model():
+	  return load_learner('doodle_classifier.pkl')
+
+classifier = load_model()
 
 stroke_width = st.sidebar.slider("Stroke width: ", 10, 25, 15)
 
@@ -38,6 +43,8 @@ canvas_result = st_canvas(
 img = Image.fromarray(canvas_result.image_data)
 img = img.resize(size=(28, 28)).convert('RGB')
 img = np.array(img)
+
+st.image(img)
 
 # Predict what the image is
 prediction = classifier.predict(img)
