@@ -44,7 +44,7 @@ img = Image.fromarray(canvas_result.image_data)
 img = img.resize(size=(28, 28)).convert('RGB')
 img = np.array(img)
 
-st.image(img)
+#st.image(img)
 
 # Predict what the image is
 prediction = classifier.predict(img)
