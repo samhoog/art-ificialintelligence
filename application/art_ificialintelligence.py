@@ -14,7 +14,7 @@ st.title("Art-ificial Intelligence")
 
 @st.cache
 def load_model():
-	  return load_learner('doodle_classifier.pkl')
+	  return load_learner('application/doodle_classifier.pkl')
 
 classifier = load_model()
 
