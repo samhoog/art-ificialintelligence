@@ -12,7 +12,7 @@ st.title("Art-ificial Intelligence")
 # st.write(os.getcwd())
 # st.write(os.listdir())
 
-@st.cache
+@st.cache(persist=True)
 def load_model():
 	  return load_learner('application/doodle_classifier.pkl')
 
